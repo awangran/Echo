@@ -4,6 +4,252 @@
     box-sizing: border-box;
 }
 
+html,body {
+    height:100%;
+    min-height:100%;
+    max-height:100%;
+  }
+
 body{
     display: grid;
+    grid-template-areas:
+    'top top top'
+    'col-1 col-2 col-3';
+    grid-template-rows: 10% 90%;
+    grid-template-columns: 30% 40% 30%;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    background-image: linear-gradient(
+  90deg,
+  hsl(219deg 75% 65%) 0%,
+  hsl(219deg 74% 66%) 21%,
+  hsl(219deg 73% 68%) 30%,
+  hsl(219deg 71% 69%) 39%,
+  hsl(219deg 70% 71%) 46%,
+  hsl(219deg 68% 72%) 54%,
+  hsl(218deg 66% 74%) 61%,
+  hsl(218deg 64% 75%) 69%,
+  hsl(218deg 62% 77%) 79%,
+  hsl(218deg 59% 78%) 100%
+);
 }
+
+p, a {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #004346;
+}
+
+h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #004346;
+}
+
+.top {
+    display: flex;
+    padding: 5px;
+    margin: 40px 10px 10px 15px;
+    grid-area: top;
+    justify-content: center;
+}
+
+.top h2{
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    height: 70px;
+    box-shadow: inset 0 0 0 0  #004346;
+    color: #004346;
+    margin: 0;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.top h2:hover {
+    box-shadow: inset 155px 0 0 0  #004346;
+    color: white;
+  }
+
+.col-1{
+    grid-area: col-1;
+    margin: 20px;
+}
+
+.col-2 {
+    grid-area: col-2;
+    margin: 20px;
+}
+.col-3{
+    grid-area: col-3;
+    margin: 20px;
+}
+
+.myw {
+    margin: 20px;
+    padding: 5px;
+    width: 215px;
+}
+
+.myw a{
+    text-decoration: none;
+    position: relative;
+}
+
+.myw a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #00747A;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+
+.myw a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.myw h3:hover{
+    color: #00747A;
+    transition: 0.5s;
+}
+
+/* filter box*/
+.filters{
+    margin: 10px;
+}
+
+.filters p{
+    color: #00747A;
+    margin: 5px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.filters h4{
+    margin: 20px;
+    font-size: 30px;
+    color: #00747A;
+}
+
+.filterbox{
+    background-color: #A7BFE8;
+    border-radius: 8%;
+    padding: 20px;
+    width: 350px;
+}
+
+.filter2 {
+    padding: 8px;
+    margin: 2px;
+    border: none;
+    background-color: #00747A;
+    color: #A7BFE8;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.filter2:hover {
+    background-color: #004346;
+    transition: .3s;
+}
+
+/* box for imgs*/
+
+.box {
+    background-color: #A7BFE8;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    margin-top: 30px;
+    height: 1000px;
+    width: 500px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.top2 {
+    background-color: #004346;
+    border-radius: 30px;
+    width: 400px;
+    height: 300px;
+    display:inline-block;
+    margin: 10px;
+}
+
+.bottom {
+    background-color: #004346;
+    border-radius: 30px;
+    width: 400px;
+    height: 300px;
+    display:inline-block;
+    margin: 10px;
+}
+
+.shoes {
+    background-color: #004346;
+    border-radius: 30px;
+    width: 400px;
+    height: 300px;
+    display:inline-block;
+    margin: 10px;
+}
+
+.buttons {
+    margin: 10px;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-generate {
+    font-size: 40px;
+    background-color: #004346;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    margin: 10px;
+}
+
+.btn-generate:hover {
+    background-color: #00747A;
+    color: #004346;
+    transition: .3s;
+}
+
+
+.btn-options{
+    font-size: 40px;
+    background-color: #00747A;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    margin: 10px;
+}
+
+.btn-options:hover{
+    background-color: #00747A;
+    color: #004346;
+    transition: .3s;
+}
+
+/* my wardrobe */
+
