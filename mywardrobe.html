@@ -4,195 +4,55 @@
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link hrf="your-project-dir/icon-font/lineicons.css" rel="stylesheet">
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+    <script src="script.js"></script>
+
+
 </head>
 <header>
     <div class="back"><!-- add arrow icon to go back to generator--></div>
 </header>
 
-<body>
+<body class="wardrobe">
     <div class="row-1">
-        <h3>My Wardrobe</h2>
+        <div class="align">
+            <a href="index.html"><i class="lni lni-arrow-left"></i></a>
+        <h2>My Wardrobe</h2>
+        </div>
     </div>
 
     <div class="row-2">
         <h3>Tops</h3>
-        <div class="tops"></div>
+        <div class="tops">
+            <div class="item">
+                <img class="cover" src="covers/1.jpeg">
+            </div>
+        </div>
     </div>
 
     <div class="row-3">
         <h3>Bottoms</h3>
-        <div class="bottoms"></div>
+        <div class="bottoms">
+            <div class="item">
+                <img class="cover" src="covers/1.jpeg">
+            </div>
+        </div>
     </div>
 
     <div class="row-4">
         <h3>Shoes</h3>
-        <div class="shoes"></div>
+        <div class="shoes2">
+            <div class="item">
+                <img class="cover" src="covers/1.jpeg">
+            </div>
+        </div>
     </div>
 
-    <div class="add">+</div>
-
-    <div class="add-popup">
-        <form action="/action_page.php" class="form-container">
-        <button type="button" class="btn-close" onclick="closeForm()">x</button>
-
-        <h2>Add new item</h2>
-        <div class="colitem-1">
-            <div class="img">
-                <!-- drop or upload img, it will remove the bg and leave only the shirt-->
-            </div>
-            <button type="submit" class="btn">Add</button>
-            <button type="reset" class="btn">Reset</button>
-        </div>
-
-        <div class="colitem-2">
-            <div class="field">
-                <label>Name</label><br>
-                <input type="text" name="name" id="name">
-            </div>
-
-            <div class="field">
-                <label for="type">Type</label><br>
-                <select id="type" name="type" required>
-                    <option value="top">Top</option>
-                    <option value="bottom">Bottom</option>
-                    <option value="shoes">Shoes</option>
-                </select></br>
-            </div>
-
-            <!-- only for tops-->
-            <div class="field">
-                <label for="type">Type 2</label><br>
-                <select id="top-type" name="top-type">
-                    <option value="tshirt">T-Shirt</option>
-                    <option value="shirt">Shirt</option>
-                    <option value="croptop">Croptop</option>
-                    <option value="sleeveless">Sleeveless</option>
-                </select></br>
-            </div>
-
-            <!-- only for bottoms-->
-            <div class="field">
-                <label for="type">Type 2</label><br>
-                <select id="bottom-type" name="bottom-type">
-                    <option value="pants">Pants</option>
-                    <option value="shorts">Shorts</option>
-                    <option value="skirt">Skirt</option>
-                    <option value="joggers">Joggers</option>
-                </select></br>
-            </div>
-
-            <!-- only for shoes-->
-            <div class="field">
-                <label for="type">Type 2</label><br>
-                <select id="shoes-type" name="shoes-type">
-                    <option value="sneakers">Sneakers</option>
-                    <option value="boots">Boots</option>
-                    <option value="sandals">Sandals</option>
-                    <option value="moccasins">Moccasins</option>
-                    <option value="heels">Heels</option>
-                </select></br>
-            </div>
-
-            <div class="field">
-                <fieldset>
-                    <legend>Colors</legend>
-        
-                    <div class="col-1"> 
-                    <ul>
-                    <li>
-                        <input type="checkbox" id="black" name="black" value="black">
-                        <label for="black">Black</label>
-                    </li>
-                    <li>
-                        <label for="white">White</label>
-                        <input type="checkbox" id="white" name="white" value="white">
-                    </li>
-                    <li>
-                    <input type="checkbox" id="red" name="red" value="red">
-                    <label for="red">Red</label>
-                    </li>
-                    <li>
-                    <input type="checkbox" id="blue" name="blue" value="blue">
-                    <label for="blue">Blue</label>
-                    </li>
-                    </ul>
-                    </div>
-        
-                    <div class="col-2"> 
-                    <ul>
-                    <li>
-                    <input type="checkbox" id="green" name="green" value="green">
-                    <label for="green">Green</label></li>
-                    <li>
-                    <input type="checkbox" id="yellow" name="yellow" value="yellow">
-                    <label for="yellow">Yellow</label></li>
-                    <li>
-                    <input type="checkbox" id="orange" name="orange" value="orange">
-                    <label for="orange">Orange</label>
-                    </li>
-                    <li>
-                    <input type="checkbox" id="pink" name="pink" value="pink">
-                    <label for="pink">Pink</label>
-                </li>
-                </ul>
-                    </div>
-                
-                    <div class="col-3"> 
-                    <ul>
-                    <li>
-                    <input type="checkbox" id="purple" name="purple" value="purple">
-                    <label for="purple">Purple</label></li>
-        
-                    <li>
-                    <input type="checkbox" id="brown" name="brown" value="brown">
-                    <label for="brown">Brown</label></li>
-        
-                    <li>
-                    <input type="checkbox" id="grey" name="grey" value="grey">
-                    <label for="grey">Grey</label></li>
-
-                    <li>
-                        <input type="checkbox" id="mixed" name="mixed" value="mixed">
-                        <label for="mixed">Mixed</label></li>
-
-                    <li>
-                        <input type="checkbox" id="prints" name="prints" value="prints">
-                        <label for="prints">prints</label></li>
-
-                    <li>
-                        <input type="checkbox" id="pattern" name="pattern" value="pattern">
-                        <label for="pattern">pattern</label></li>
-                    <br>
-                </ul>
-                    </div>
-                
-                </fieldset>
-                </div>
-
-                <div class="field">
-                    <label for="season">Season</label><br>
-                    <select id="season" name="season">
-                        <option value="summer">Summer</option>
-                        <option value="winter">Winter</option>
-                        <option value="fall">Fall</option>
-                        <option value="spring">Spring</option>
-                    </select></br>
-                </div>
-
-
-                <div class="field">
-                    <label for="dresscode">Dress Code</label><br>
-                    <select id="dresscode" name="dresscode">
-                        <option value="casual">Casual</option>
-                        <option value="formal">Formal</option>
-                        <option value="semiformal">Semi Formal</option>
-                        <option value="home">Home</option>
-                    </select></br>
-                </div>
-        </div>
-        </form>
-    </div>
-
+    <a href="form.html"><div class="add"><h4>+</h4></div></a>
 </body>
 </html>
