@@ -18,7 +18,7 @@
 
 <body>
     <div class="add-form">
-        <form action="connect.php" method="post" class="form-container">
+        <form action="" method="post" class="form-container">
             <div class="title">
                 <a href="index.html"><i class="lni lni-arrow-left"></i></a>
                 <h2>Add new item</h2>
@@ -26,11 +26,12 @@
             <div class="block1">
                 <div class="img">
                     <input type="file" id="cover-img" name="cover-img" ><br>
+                    <img scr="" alt="Preview" id="imgPreview" width="400" height="300">
                     <!-- drop or upload img, it will remove the bg and leave only the shirt-->
                 </div>
                 <div class="bloi">
-                    <button type="submit" class="btn">Add</button>
-                    <button type="reset" class="btn">Reset</button>
+                    <button id="submitForm" class="btn">Add</button>
+                    <button type="reset" class="btn" id="resetForm">Reset</button>
                 </div>
             </div>
 
@@ -182,13 +183,43 @@
                     </fieldset>
                 </div>  
                 
-                  
-
             </div>
             
         </form>
 
     </div>
+
+    <script>
+        document.querySelector('#cover-img').addEventListener("change", function(){
+            const reader = new FileReader();
+
+            reader.addEventListener("load", () => {
+                localStorage.setItem("recent-image", reader.result);
+            });
+
+            reader.readAsDataURL(this.files[0]);
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const recentImageDataUrl = localStorage.getItem("recent-image");
+
+            if (recentImageDataUrl) {
+                document.querySelector("#imgPreview").setAttribute("src", recentImageDataUrl);
+            }
+        });
+
+        $("#submitForm").click(function() {
+        alert("The item has been added!");
+            });
+        
+            $("#resetForm").click(function() {
+                var elem = document.querySelector('#imgPreview');
+                elem.style.display = "none";                
+            });
+
+        
+    </script>
 </body>
 </html>
+
 

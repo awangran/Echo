@@ -195,7 +195,7 @@ h3 {
 }
 
 .top2 {
-    background-color: #004346;
+    background-color: white;
     border-radius: 30px;
     width: 400px;
     height: 300px;
@@ -204,7 +204,7 @@ h3 {
 }
 
 .bottom {
-    background-color: #004346;
+    background-color: white;
     border-radius: 30px;
     width: 400px;
     height: 300px;
@@ -213,7 +213,7 @@ h3 {
 }
 
 .shoes {
-    background-color: #004346;
+    background-color: white;
     border-radius: 30px;
     width: 400px;
     height: 300px;
@@ -307,7 +307,10 @@ h3 {
     margin: 30px;
     margin-left: 50px;
     grid-area: row-2; 
-    align-items: left;
+    align-items: center;
+    display: flex;
+    margin: auto;
+    
 }
 
 .row-3{
@@ -326,14 +329,30 @@ h3 {
 .item{
     background-color: #00747A;
     border-radius: 15px;
-    height: 200px;
-    width: 200px;
+    height: 400px;
+    width: 400px;
     margin: 10px;
     justify-content: center;
     display: flex;
     position: relative;
     margin-bottom: 30px;
     align-items: center;
+    margin-left: 20px;
+}
+
+.next{
+    font-size: 20px;
+    background-color: #004346;
+    border: none;
+    border-radius: 25px;
+    padding: 15px;
+    color: #cdd5e4;
+    margin: 10px;
+    margin-left: 50px;
+}
+
+.next:hover{
+    background-color: #00747A;
 }
 
 .cover{

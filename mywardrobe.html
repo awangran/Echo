@@ -18,7 +18,7 @@
     <div class="back"><!-- add arrow icon to go back to generator--></div>
 </header>
 
-<body class="wardrobe">
+<body class="wardrobe" onload="makeImage()"";>
     <div class="row-1">
         <div class="align">
             <a href="index.html"><i class="lni lni-arrow-left"></i></a>
@@ -27,31 +27,43 @@
     </div>
 
     <div class="row-2">
+        <div class="yes1">
         <h3>Tops</h3>
-        <div class="tops">
+        <div class="tops" id="displayTops">
             <div class="item">
-                <img class="cover" src="covers/1.jpeg">
+                <img class="cover" src="/1.jpeg">
             </div>
         </div>
+        <button class="next" onclick="nextImage()">Next Image</button>
+
     </div>
 
-    <div class="row-3">
-        <h3>Bottoms</h3>
-        <div class="bottoms">
-            <div class="item">
-                <img class="cover" src="covers/1.jpeg">
+        <div class="yes2">
+            <h3>Bottoms</h3>
+            <div class="bottoms" id="displayBottoms">
+                <div class="item">
+                    <img class="cover" src="covers/1.jpeg">
+                </div>
             </div>
+            <button class="next" onclick="nextImage2()">Next Image</button>
         </div>
-    </div>
+        
 
-    <div class="row-4">
-        <h3>Shoes</h3>
-        <div class="shoes2">
-            <div class="item">
-                <img class="cover" src="covers/1.jpeg">
+
+        <div class="yes3">
+            <h3>Shoes</h3>
+            <div class="shoes2">
+                <div class="item" id="displayShoes">
+                    <img class="cover" src="covers/1.jpeg">
+                </div>
             </div>
+            <button class="next" onclick="nextImage3()">Next Image</button>
         </div>
+        
     </div>
+   
+
+    
 
     <a href="form.html"><div class="add"><h4>+</h4></div></a>
 </body>

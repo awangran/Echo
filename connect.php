@@ -1,5 +1,5 @@
 <?php
-    $name = $_POST['name'];
+   /*  $name = $_POST['name'];
     $type = $_POST['type'];
     $toptype = $_POST['top-type'];
     $bottomtype = $_POST['bottom-type'];
@@ -10,7 +10,7 @@
 
     //db connection
 
-    $conn = new mysqli('localhost', 'ashlee', '0000', 'echo');
+    $conn = new mysqli('127.0.0.1', 'ashlee', '0000', 'echo');
     if($conn->connect_error){
         die('Connection Failed : '.$conn->connect_error);
     }else{
@@ -21,7 +21,7 @@
         echo "clothes registered successfully...";
         $stmt->close();
         $conn->close();
-    }
+    } */
 
 
-?>
+?> 
