@@ -1,5 +1,5 @@
 <?php
-    $name = $_POST['name'];
+   /*  $name = $_POST['name'];
     $type = $_POST['type'];
     $toptype = $_POST['top-type'];
     $bottomtype = $_POST['bottom-type'];
@@ -21,7 +21,7 @@
         echo "clothes registered successfully...";
         $stmt->close();
         $conn->close();
-    }
+    } */
 
 
-?>
+?> 
