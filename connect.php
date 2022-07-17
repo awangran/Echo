@@ -10,7 +10,7 @@
 
     //db connection
 
-    $conn = new mysqli('localhost', 'root', '', 'test');
+    $conn = new mysqli('127.0.0.1', 'ashlee', '0000', 'echo');
     if($conn->connect_error){
         die('Connection Failed : '.$conn->connect_error);
     }else{
